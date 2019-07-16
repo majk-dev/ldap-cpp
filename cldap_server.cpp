@@ -244,10 +244,10 @@ bool Ldap::Server::Ping(void) const
     if(ldap_object)
     {
 	LDAPMessage* res = NULL;
-	int errno = ldap_search_ext_s(ldap_object, NULL, BASE, NULL, NULL, 0, NULL, NULL, NULL, 0, & res);
+	int erno = ldap_search_ext_s(ldap_object, NULL, BASE, NULL, NULL, 0, NULL, NULL, NULL, 0, & res);
 	if(res) ldap_msgfree(res);
 
-	return LDAP_SERVER_DOWN != errno;
+	return LDAP_SERVER_DOWN != erno;
     }
 
     return false;
