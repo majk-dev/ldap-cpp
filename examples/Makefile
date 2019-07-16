@@ -1,7 +1,7 @@
 # makefile
 
 TARGETS = test ping groups group_ldap_acl
-LIBS = -lldap -llber  -lcrypto -lssl ../libcldap++.a
+LIBS = -lldap -llber -lssl -lcrypto ../libcldap++.a
 CFLAGS = -O2 -Wall -I..
 
 CC = g++
